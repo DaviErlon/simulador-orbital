@@ -11,6 +11,10 @@ find_package(OpenGL REQUIRED)
 
 add_executable(app
     src/main.cpp
+    src/astro.cpp
+    src/camera.cpp
+    src/colors.cpp
+    src/space.cpp
 )
 
 target_include_directories(app PRIVATE include)
