@@ -17,7 +17,7 @@ public:
     void addAstro(const Astro& a);
 
     void update(float dt);
-    void draw(float gridSize = 40.0f, int gridDivisions = 80) const;
+    void draw(float gridSize = 60.0f, int gridDivisions = 120) const;
 
     const std::vector<Astro>& getAstros() const;
 };

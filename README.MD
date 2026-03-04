@@ -1,5 +1,17 @@
 # Simulador de Órbita com GLFW + OpenGL
 
+---
+
+# Demonstração
+
+Ajustando os astros declarados em `populateSpace()`e o tamanho da grade em `space.hpp`, podemos fazer qualquer sistema orbital
+
+<p align="center">
+  <img src="demo.gif" alt="Simulação gravitacional" width="600">
+</p>
+
+---
+
 ## Sobre o GLFW
 
 O **GLFW** (Graphics Library Framework) é uma biblioteca leve escrita em C para criação de janelas, contextos OpenGL e gerenciamento de entrada (teclado, mouse, scroll, etc).  
@@ -290,7 +302,7 @@ Isso cria um efeito visual semelhante a uma "curvatura do espaço".
 
 ## 🔹 `colors.cpp`
 
-Conter os valores de cores comuns.
+Contém os valores de cores comuns.
 
 ### Responsabilidades:
 

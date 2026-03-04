@@ -57,9 +57,9 @@ int main()
 void populateSpace(Space *space)
 {
     // ======== Dois astros massivos ========
-    float mass1 = 500.0f;
-    float mass2 = 1.0f;
-
+    float mass1 = 300.0f;
+    float mass2 = 300.0f;
+ 
     // Distância inicial entre eles
     float dist = 8.0f;
 
@@ -67,19 +67,23 @@ void populateSpace(Space *space)
     float v1 = std::sqrt(mass2 * mass2 / (dist * (mass1 + mass2)));
     float v2 = std::sqrt(mass1 * mass1 / (dist * (mass1 + mass2)));
 
+    float x1 = -dist * mass2 / (mass1 + mass2);
+    float x2 = dist * mass1 / (mass1 + mass2);
+
     space->addAstro(Astro{
-        -dist * mass2 / (mass1 + mass2), 0.0f, 0.0f, // posição (centro de massa)
+        x1, 0.0f, 0.0f, // posição (centro de massa)
         0.0f, 0.0f, v1,                              // velocidade
-        2.5f,                                        // raio
+        1.0f,                                        // raio
         mass1,                                       // massa
         amarelo});
 
     space->addAstro(Astro{
-        dist * mass1 / (mass1 + mass2), 0.0f, 0.0f,
+        x2, 0.0f, .0f,
         0.0f, 0.0f, -v2,
-        0.4f,
+        1.0f,
         mass2,
         azul});
+
 }
 
 GLFWwindow *StartGLFW()
